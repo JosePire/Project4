@@ -141,7 +141,7 @@ body {
 }
 
 .number {
-    color: white;
+
     border-radius: 20px;
     background: rgba(147, 86, 220, 1);
     width: 24px;
@@ -150,6 +150,15 @@ body {
 
 }
 
+.number-2 {
+    left: -25px;
+    color: white;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14.1818px;
+    line-height: 17px;
+}
 
 
 .text-fonction {
@@ -206,6 +215,13 @@ body {
 
 }
 
+.restaurantName {
+    color: #000000;
+}
+
+.restaurantLocation {
+    color: #000000;
+}
 
 
 .restaurantItem {
@@ -233,6 +249,16 @@ body {
 }
 
 .footerLink {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.footerLink-2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
