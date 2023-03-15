@@ -1,0 +1,19 @@
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    width: 100%;
+}
+
+.ohmyfood {
+    width: 162px;
+    height: 44px;
+    text-align: center;
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 44px;
+
+}
