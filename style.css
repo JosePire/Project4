@@ -141,12 +141,13 @@ body {
 }
 
 .number {
-
+    position: relative;
     border-radius: 20px;
     background: rgba(147, 86, 220, 1);
     width: 24px;
     height: 24px;
     text-align: center;
+    left: -13px;
 
 }
 
@@ -180,6 +181,11 @@ body {
     padding-top: 68px;
     gap: 20px;
     background: #D2D2D2;
+
+}
+
+.gridList {
+    margin: 0px 17px;
 }
 
 .restaurantImage {
@@ -192,12 +198,14 @@ body {
     border-radius: 0px 0px 15px 15px;
     background-color: #353535;
     box-sizing: border-box;
-    width: 340px;
+    width: 100%;
+
+
+
+
 }
 
-.restaurantText {
-    padding-top: 16px;
-}
+.restaurantText {}
 
 .sectionTitle {
     margin: 0px 20px;
@@ -209,9 +217,10 @@ body {
     height: 29px;
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
-    background: rgba(153, 226, 208, 1);
     width: 80px;
     height: 29px;
+    right: 0;
+    top: 0;
 
 }
 
@@ -223,13 +232,14 @@ body {
     color: #000000;
 }
 
-
 .restaurantItem {
     text-decoration: none;
+
 }
 
 
 /* FOOTER */
+
 .linkTitle {
     display: flex;
     flex-direction: column;
@@ -248,22 +258,12 @@ body {
     padding: 20px 212px 16px 25px;
 }
 
-.footerLink {
+.footerlink {
+    color: white;
+    text-decoration: none;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.footerLink-2 {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
-    text-decoration: none;
 }
