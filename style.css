@@ -24,6 +24,7 @@ body {
     font-weight: 400;
     font-size: 30px;
     line-height: 44px;
+    background: rgba(255, 255, 255, 1);
 
 }
 
@@ -182,16 +183,19 @@ body {
     gap: 20px;
     background: #D2D2D2;
 
+
 }
 
 .gridList {
     margin: 0px 17px;
+
 }
 
 .restaurantImage {
     border-radius: 15px 15px 0px 0px;
     box-sizing: border-box;
     object-fit: cover;
+    cursor: pointer;
 }
 
 .restaurantInfo {
