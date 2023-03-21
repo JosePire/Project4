@@ -296,17 +296,6 @@ footer {
     flex-direction: column;
 }
 
-.menuPrice {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.menuFood {
-    display: flex;
-    flex-direction: column;
-}
-
-
 .menuCategory {
     font-family: 'Roboto';
     font-style: normal;
@@ -319,6 +308,8 @@ footer {
     padding: 42px 87px 12px 13px;
     color: #000000;
 }
+
+
 
 .menu-title {
     width: 341px;
