@@ -11,6 +11,10 @@ body {
     margin-top: -4rem;
 }
 
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
 
 
 /* HEADER */
@@ -204,10 +208,7 @@ body {
 
 }
 
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 
 
