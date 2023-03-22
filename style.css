@@ -3,6 +3,14 @@ body {
     margin: 0px;
 }
 
+.detailedMenu {
+    width: 100%;
+    border-radius: 30px 30px 0 0;
+    background: rgba(246, 246, 246, 1);
+    position: relative;
+    margin-top: -4rem;
+}
+
 
 
 /* HEADER */
@@ -13,6 +21,7 @@ body {
     align-items: center;
     height: 63px;
     width: 100%;
+
 }
 
 .ohmyfood {
@@ -25,6 +34,7 @@ body {
     font-size: 30px;
     line-height: 44px;
     background: rgba(255, 255, 255, 1);
+    margin: 64px;
 
 }
 
@@ -100,6 +110,7 @@ body {
     align-items: center;
     color: white;
     margin: 25px 50px 55px 50px;
+    cursor: pointer;
 }
 
 
@@ -181,14 +192,32 @@ body {
     display: flex;
     flex-direction: column;
     padding-top: 68px;
+    padding-bottom: 65px;
     gap: 20px;
     background: #D2D2D2;
-
-
 }
 
 .gridList {
     margin: 0px 17px;
+    gap: 20px;
+    display: grid;
+
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.menu-title {
+    font-size: 28px;
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    padding: 0px 17px 0px 17px;
+
 
 }
 
@@ -197,16 +226,17 @@ body {
     box-sizing: border-box;
     object-fit: cover;
     cursor: pointer;
+    width: 100%;
 }
 
 .restaurantInfo {
     border-radius: 0px 0px 15px 15px;
-    background-color: #353535;
+    background-color: white;
     box-sizing: border-box;
-    width: 335px;
+    width: 100%;
 }
 
-.restaurantText {}
+
 
 .sectionTitle {
     margin: 0px 20px;
@@ -219,31 +249,61 @@ body {
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
     right: 10px;
-
+    top: 10px;
     background: rgba(153, 226, 208, 1);
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .restaurantName {
     color: #000000;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
 }
+
+.heartIcon {
+    height: 21px;
+    width: 21px;
+    color: rgba(16, 16, 16, 1);
+}
+
 
 .restaurantLocation {
     color: #000000;
+    font-size: 17px;
 }
 
 .restaurantItem {
     text-decoration: none;
-
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
 }
 
+.restaurantItem .restaurantInfo {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+.restaurantItem .restaurantName {
+    font-weight: 600;
+    margin-top: 0.5rem;
+
+}
 
 /* FOOTER */
-footer {
-    padding-top: 68px;
-}
+
 
 .linkTitle {
     display: flex;
@@ -286,14 +346,27 @@ footer {
 }
 
 /* LA PALETTE DU GOUT */
+
+.gridList-2 {
+    width: 100%;
+}
+
 .menu {
+
     padding: 32px 17px 42px 17px;
+    width: 100%;
+}
+
+.restaurantImage-2 {
+    border-radius: 0px;
     width: 100%;
 }
 
 .menuList {
     display: flex;
     flex-direction: column;
+    padding: 12px;
+    gap: 12px;
 }
 
 .menuCategory {
@@ -305,23 +378,61 @@ footer {
     text-transform: uppercase;
     height: 27px;
     width: 275px;
-    padding: 42px 87px 12px 13px;
+    padding: 0px 87px 12px 13px;
     color: #000000;
+}
+
+.menuFood {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    width: 349px;
+    box-sizing: border-box;
+
+}
+
+.menuFood .menuInfo {
+    padding: 13px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuFood .menuInfo .menuText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 
 
-.menu-title {
-    width: 341px;
-    height: 27px;
-    left: 17px;
-    top: 0px;
-    font-family: 'Shrikhand';
-    font-style: italic;
-    font-weight: 400;
-    font-size: 28px;
-    line-height: 41px;
-    color: #101010;
+.menuPrice {
+    display: flex;
+    align-items: flex-end;
+
+}
+
+.menuTitle {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    padding-top: 12px
+}
+
+.menuDetail {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 18px;
+
 }
 
 .icon-favori {
