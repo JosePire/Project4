@@ -72,6 +72,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 30px;
     height: 300px;
 
@@ -145,6 +146,7 @@ p {
 .test {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
 
 }
@@ -152,6 +154,7 @@ p {
 .fonction {
     font-size: 24px;
     margin: 0px 20px;
+    font-family: 'Roboto';
 
 }
 
@@ -181,6 +184,7 @@ p {
     height: 24px;
     text-align: center;
     left: -13px;
+    flex-shrink: 0;
 
 }
 
@@ -354,7 +358,7 @@ p {
 }
 
 .footerlink-2 {
-    padding-left: 11px;
+
     text-decoration: none;
     font-style: normal;
     font-weight: 500;
@@ -378,6 +382,7 @@ p {
 .restaurantImage-2 {
     border-radius: 0px;
     width: 100%;
+    object-fit: cover;
 }
 
 .menuList {
@@ -475,6 +480,9 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
+        max-width: 1054px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 
@@ -535,8 +543,18 @@ p {
         height: 114px;
     }
 
-    .footerTitle {
-        padding: 0;
+    .footerTitle {}
+
+    .element-1 {
+        order: 4;
+    }
+
+    .element-2 {
+        order: 3;
+    }
+
+    .element-3 {
+        order: 2;
     }
 
 
