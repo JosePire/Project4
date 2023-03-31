@@ -129,6 +129,12 @@ p {
 
 
 
+h1:hover {
+    color: fuchsia;
+    width: 100%;
+    font-size: 30px;
+    animation: monanimation 5s;
+}
 
 /* FONCTIONNEMENT */
 
@@ -292,7 +298,31 @@ p {
 .heartIcon {
     height: 21px;
     width: 21px;
-    color: rgba(16, 16, 16, 1);
+    animation: monanimation 5s;
+
+}
+
+.heartIcon :hover {
+    color: #9356DC -5.2%, #FF79DA 110.74%;
+    width: 100%;
+    font-size: 25px;
+}
+
+
+@keyframes monanimation {
+    0% {
+        width: 300px;
+
+    }
+
+    100% {
+        windows: 100%;
+
+    }
+
+
+
+
 }
 
 
@@ -413,6 +443,7 @@ p {
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     width: 349px;
     box-sizing: border-box;
+    justify-content: flex-end;
 
 }
 
@@ -465,6 +496,42 @@ p {
     width: 22px;
 
 }
+
+.button {
+    position: absolute;
+    cursor: pointer;
+    width: 59px;
+    height: 69px;
+    left: 635px;
+    flex: none;
+    order: 1;
+    border-radius: 0px 15px 0px 15px;
+    z-index: 1;
+    padding-left: 20px;
+    transform: rotate(360deg);
+
+}
+
+.Icon-check {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 20px;
+    top: 24.97px;
+    padding-top: 4px;
+    transform: rotate(360deg);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 768px) {
