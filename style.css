@@ -128,14 +128,6 @@ p {
 }
 
 
-
-h1:hover {
-    color: fuchsia;
-    width: 100%;
-    font-size: 30px;
-    animation: monanimation 5s;
-}
-
 /* FONCTIONNEMENT */
 
 .flex {
@@ -295,18 +287,28 @@ h1:hover {
     line-height: 21px;
 }
 
-.heartIcon {
-    height: 21px;
-    width: 21px;
-    animation: monanimation 5s;
 
+.heart2 {
+    opacity: 0;
 }
 
-.heartIcon :hover {
-    color: #9356DC -5.2%, #FF79DA 110.74%;
-    width: 100%;
-    font-size: 25px;
+.Hearticon {
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    right: 0px;
 }
+
+.Hearticon:hover {
+    opacity: 1;
+    transition-property: all;
+    transition-duration: 1.5s;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+}
+
 
 
 @keyframes monanimation {
@@ -503,14 +505,13 @@ h1:hover {
     width: 59px;
     height: 69px;
     left: 635px;
-    flex: none;
-    order: 1;
-    border-radius: 0px 15px 0px 15px;
-    z-index: 1;
-    padding-left: 20px;
-    transform: rotate(360deg);
+
+
+    border-radius: 15px;
 
 }
+
+
 
 .Icon-check {
     position: absolute;
@@ -519,8 +520,45 @@ h1:hover {
     right: 20px;
     top: 24.97px;
     padding-top: 4px;
-    transform: rotate(360deg);
+
 }
+
+
+
+
+@keyframes animPlat {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    60% {
+
+        opacity: 0.7;
+        transform: translateY(10px);
+
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home {
+    animation: animPlat 3s;
+}
+
+.menuFood:hover {
+    background-color: red;
+}
+
+.menuFood {
+    transition: background-color 2s;
+}
+
+
+
 
 
 
@@ -610,7 +648,7 @@ h1:hover {
         height: 114px;
     }
 
-    .footerTitle {}
+
 
     .element-1 {
         order: 4;
