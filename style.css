@@ -125,8 +125,12 @@ p {
     color: white;
     margin: 25px 50px 55px 50px;
     cursor: pointer;
+
 }
 
+.mainButton:hover {
+    background-color: #f2f2f286;
+}
 
 /* FONCTIONNEMENT */
 
@@ -297,6 +301,7 @@ p {
     width: 25px;
     position: absolute;
     right: 0px;
+    color: #000000;
 }
 
 .Hearticon:hover {
@@ -440,12 +445,14 @@ p {
 .menuFood {
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
+    border-radius: 15px 0px 0px 15px;
     background: rgba(255, 255, 255, 1);
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    width: 349px;
+    width: 100%;
     box-sizing: border-box;
     justify-content: flex-end;
+    overflow: hidden;
+
 
 }
 
@@ -476,6 +483,7 @@ p {
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
+
 }
 
 .menuTitle {
@@ -490,8 +498,6 @@ p {
     overflow: hidden;
 }
 
-
-
 .icon-favori {
     padding-left: 30px;
     height: 21px;
@@ -499,19 +505,25 @@ p {
 
 }
 
-.button {
+.check {
     position: absolute;
     cursor: pointer;
-    width: 59px;
+    width: 4rem;
     height: 69px;
-    left: 635px;
+    left: 650px;
+    background: #99E2D0;
+    border-radius: 0px 15px 15px 0px;
+    padding-bottom: 8px;
 
 
-    border-radius: 15px;
+
 
 }
 
+.check:hover {
+    margin-right: 0;
 
+}
 
 .Icon-check {
     position: absolute;
@@ -520,57 +532,60 @@ p {
     right: 20px;
     top: 24.97px;
     padding-top: 4px;
+    color: white;
+    aspect-ratio: 1;
+    font-size: 1.5rem;
+}
+
+.loader {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    inset: 0;
+    opacity: 1;
+    height: 100vh;
+    animation: animHome 3s linear;
+    display: grid;
+    transform-origin: center;
+
 
 }
 
 
-
-
-@keyframes animPlat {
+@keyframes animHome {
     0% {
-        opacity: 0;
-        transform: translateY(50px);
+
+        transform: scale(1);
     }
 
-    60% {
 
-        opacity: 0.7;
-        transform: translateY(10px);
-
-    }
 
     100% {
-        opacity: 1;
-        transform: translateY(0);
+
+        transform: scale(0);
     }
-}
-
-.home {
-    animation: animPlat 3s;
-}
-
-.menuFood:hover {
-    background-color: red;
 }
 
 .menuFood {
-    transition: background-color 2s;
+    opacity: 1;
+    animation: animMenu 3s backwards;
+
+
 }
 
+@keyframes animMenu {
+    0% {
+        transform: translateY(20px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 @media screen and (min-width: 768px) {
 
