@@ -445,15 +445,12 @@ p {
 .menuFood {
     display: flex;
     flex-direction: column;
-    border-radius: 15px 0px 0px 15px;
-    background: rgba(255, 255, 255, 1);
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background: RGBA(255, 255, 255, 1);
+    box-shadow: 0 px 4.01149 px 15.0431px rgba(0, 0, 0, 0.1);
     width: 100%;
     box-sizing: border-box;
     justify-content: flex-end;
-    overflow: hidden;
-
-
 }
 
 .menuFood .menuInfo {
@@ -514,21 +511,54 @@ p {
     background: #99E2D0;
     border-radius: 0px 15px 15px 0px;
     padding-bottom: 8px;
+    margin-left: 4rem;
+    transition: all 1s;
+    opacity: 0;
+}
 
+.menuFood:hover .check:hover {
+    opacity: 100%;
+    width: 4rem;
+}
 
-
-
+.check:hover .Icon-check {
+    transform: rotate(360deg);
+    transition: 0.4s ease-in-out;
+    animation: rotate 1s ease-in-out;
+    animation: spinneroff 1s ease-out;
 }
 
 .check:hover {
-    margin-right: 0;
+    margin-left: 0;
 
 }
 
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+
+}
+
+@keyframes spinneroff {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+
+
 .Icon-check {
     position: absolute;
-    width: 20px;
-    height: 20px;
+
     right: 20px;
     top: 24.97px;
     padding-top: 4px;
