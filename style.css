@@ -75,8 +75,7 @@ p {
     align-items: center;
     padding: 30px;
     height: 300px;
-
-    background: #D2D2D2;
+    background: #f6f6f6;
 }
 
 .resto-Title {
@@ -88,6 +87,7 @@ p {
     line-height: 28px;
     text-align: center;
     padding: 20px 30px 0px 20px;
+
 }
 
 .restoText {
@@ -123,14 +123,12 @@ p {
     justify-content: center;
     align-items: center;
     color: white;
-    margin: 25px 50px 55px 50px;
+    margin: 25px auto 55px auto;
     cursor: pointer;
 
 }
 
-.mainButton:hover {
-    background-color: #f2f2f286;
-}
+
 
 /* FONCTIONNEMENT */
 
@@ -220,7 +218,7 @@ p {
     padding-top: 68px;
     padding-bottom: 65px;
     gap: 20px;
-    background: #D2D2D2;
+    background: #f6f6f6;
 }
 
 .gridList {
@@ -234,16 +232,6 @@ p {
 
 
 
-.menu-title {
-    font-size: 28px;
-    font-family: 'Shrikhand';
-    font-style: italic;
-    font-weight: 400;
-    padding: 0px 17px 0px 17px;
-    text-align: center;
-
-
-}
 
 .restaurantImage {
     border-radius: 15px 15px 0px 0px;
@@ -264,12 +252,14 @@ p {
 
 .sectionTitle {
     margin: 0px 20px;
-
+    font-family: 'Roboto';
+    font-size: 24px;
 }
 
 .tag {
     width: 80px;
     height: 29px;
+    font-family: 'Roboto';
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
     right: 10px;
@@ -297,8 +287,8 @@ p {
 }
 
 .Hearticon {
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 22px;
     position: absolute;
     right: 0px;
     color: #000000;
@@ -347,7 +337,7 @@ p {
 }
 
 .restaurantItem .restaurantInfo {
-    padding: 5px;
+    padding: 15px;
     display: grid;
     grid-template-columns: auto auto;
     align-items: center;
@@ -357,8 +347,8 @@ p {
 
 .restaurantItem .restaurantName {
     font-weight: 600;
-    margin-top: 0.5rem;
-    margin-bottom: 10px;
+
+    margin-bottom: 5px;
 }
 
 /* FOOTER */
@@ -416,6 +406,18 @@ p {
     width: 100%;
 }
 
+.menu-title {
+    font-size: 28px;
+    font-family: 'Shrikhand';
+    font-style: italic;
+    font-weight: 400;
+    padding: 0px 17px 0px 17px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
 .restaurantImage-2 {
     border-radius: 0px;
     width: 100%;
@@ -440,6 +442,20 @@ p {
     width: 275px;
     padding: 0px 87px 12px 13px;
     color: #000000;
+    position: relative;
+}
+
+.menuCategory::after {
+    background: rgba(153, 226, 208, 1);
+    position: absolute;
+    border: 3px solid rgba(153, 226, 208, 1);
+    content: "";
+    left: 12px;
+    bottom: 10px;
+
+
+
+    width: 40px;
 }
 
 .menuFood {
@@ -493,16 +509,15 @@ p {
     color: #000000;
     text-overflow: ellipsis;
     overflow: hidden;
-}
-
-.icon-favori {
-    padding-left: 30px;
-    height: 21px;
-    width: 22px;
 
 }
+
+
 
 .check {
+    display: flex;
+
+    align-items: flex-end;
     position: absolute;
     cursor: pointer;
     width: 4rem;
@@ -512,7 +527,7 @@ p {
     border-radius: 0px 15px 15px 0px;
     padding-bottom: 8px;
     margin-left: 4rem;
-    transition: all 1s;
+    transition: margin-left 1s;
     opacity: 0;
 }
 
@@ -521,6 +536,12 @@ p {
     width: 4rem;
 }
 
+.check:hover {
+    margin-left: 0;
+}
+
+
+
 .check:hover .Icon-check {
     transform: rotate(360deg);
     transition: 0.4s ease-in-out;
@@ -528,10 +549,7 @@ p {
     animation: spinneroff 1s ease-out;
 }
 
-.check:hover {
-    margin-left: 0;
 
-}
 
 @keyframes rotate {
     0% {
