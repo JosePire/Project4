@@ -3,6 +3,29 @@ body {
     margin: 0px;
 }
 
+.loader {
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    animation: spin 3s linear;
+
+    width: 100%;
+    transform-origin: top;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
 .detailedMenu {
     width: 100%;
     border-radius: 30px 30px 0 0;
@@ -19,7 +42,9 @@ body {
 p {
     font-family: 'Roboto';
     font-size: 15px;
-    color: gray;
+    color: #000000;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 /* HEADER */
@@ -30,6 +55,12 @@ p {
     align-items: center;
     height: 63px;
     width: 100%;
+}
+
+.FlecheRetour {
+    position: absolute;
+    left: 0%;
+    right: 0%;
 
 }
 
@@ -125,8 +156,15 @@ p {
     color: white;
     margin: 25px auto 55px auto;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.mainButton:hover {
+    box-shadow: 0px 30px 25px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.50);
 
 }
+
 
 
 
@@ -196,6 +234,7 @@ p {
     font-weight: 500;
     font-size: 14.1818px;
     line-height: 17px;
+    vertical-align: middle;
 }
 
 
@@ -292,6 +331,8 @@ p {
     position: absolute;
     right: 0px;
     color: #000000;
+    margin-top: 11px;
+
 }
 
 .Hearticon:hover {
@@ -304,6 +345,10 @@ p {
     background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
 }
 
+.restaurantText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 
 @keyframes monanimation {
@@ -338,9 +383,7 @@ p {
 
 .restaurantItem .restaurantInfo {
     padding: 15px;
-    display: grid;
-    grid-template-columns: auto auto;
-    align-items: center;
+    display: flex;
     justify-content: space-between;
     margin: 0px;
 }
@@ -370,7 +413,7 @@ p {
     font-size: 18px;
     line-height: 26px;
     color: white;
-    padding: 20px 212px 16px 25px;
+    padding: 20px 212px 16px 20px;
 }
 
 .footerlink {
@@ -381,7 +424,7 @@ p {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    margin: 0px 25px;
+    margin: 0px 20px;
 }
 
 .footerlink-2 {
@@ -429,6 +472,7 @@ p {
     flex-direction: column;
     padding: 12px;
     gap: 12px;
+
 }
 
 .menuCategory {
@@ -443,6 +487,9 @@ p {
     padding: 0px 87px 12px 13px;
     color: #000000;
     position: relative;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
 }
 
 .menuCategory::after {
@@ -452,29 +499,62 @@ p {
     content: "";
     left: 12px;
     bottom: 10px;
-
-
-
     width: 40px;
 }
 
 .menuFood {
-    display: flex;
-    flex-direction: column;
+
+    flex-direction: row;
     border-radius: 15px;
     background: RGBA(255, 255, 255, 1);
     box-shadow: 0 px 4.01149 px 15.0431px rgba(0, 0, 0, 0.1);
     width: 100%;
+    height: 100%;
     box-sizing: border-box;
-    justify-content: flex-end;
+    animation: appear 3s;
+    animation-fill-mode: both;
+
+
+}
+
+.left {
+
+    background-color: yellow;
+    box-shadow: 0 px 4.01149 px 15.0431px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+
+
+}
+
+article.delay1 {
+
+    animation: appear 3s 1s;
+}
+
+article.delay2 {
+    animation: appear 3s 2s;
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
 }
 
 .menuFood .menuInfo {
     padding: 13px;
     overflow: hidden;
-
+    text-overflow: ellipsis;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    transition: width 2s;
 }
 
 .menuFood .menuInfo .menuText {
@@ -512,43 +592,33 @@ p {
 
 }
 
-
-
 .check {
     display: flex;
-
-    align-items: flex-end;
-    position: absolute;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    width: 4rem;
+    width: 0;
     height: 69px;
-    left: 650px;
+    overflow: hidden;
     background: #99E2D0;
     border-radius: 0px 15px 15px 0px;
     padding-bottom: 8px;
-    margin-left: 4rem;
-    transition: margin-left 1s;
-    opacity: 0;
+    transition: width 2s;
+
 }
 
-.menuFood:hover .check:hover {
+
+
+
+
+.menuFood:hover .menuInfo {
+    width: 80%;
+}
+
+.menuFood:hover .check {
+    width: 20%;
     opacity: 100%;
-    width: 4rem;
 }
-
-.check:hover {
-    margin-left: 0;
-}
-
-
-
-.check:hover .Icon-check {
-    transform: rotate(360deg);
-    transition: 0.4s ease-in-out;
-    animation: rotate 1s ease-in-out;
-    animation: spinneroff 1s ease-out;
-}
-
 
 
 @keyframes rotate {
@@ -563,84 +633,63 @@ p {
 }
 
 @keyframes spinneroff {
+
     from {
-        transform: rotate(360deg);
+        transform: rotate(0deg);
     }
 
     to {
-        transform: rotate(0deg);
+        transform: rotate(360deg);
     }
 }
 
-
+.menuFood:hover .Icon-check {
+    transform: rotate(0deg);
+}
 
 .Icon-check {
-    position: absolute;
-
-    right: 20px;
-    top: 24.97px;
+    transition: 1s ease-in-out;
+    transform: rotate(360deg);
     padding-top: 4px;
     color: white;
     aspect-ratio: 1;
     font-size: 1.5rem;
 }
 
-.loader {
-    position: relative;
-    z-index: 1;
-    background-color: #fff;
-    inset: 0;
-    opacity: 1;
-    height: 100vh;
-    animation: animHome 3s linear;
-    display: grid;
-    transform-origin: center;
-
-
-}
-
-
-@keyframes animHome {
-    0% {
-
-        transform: scale(1);
-    }
 
 
 
-    100% {
-
-        transform: scale(0);
-    }
-}
-
-.menuFood {
-    opacity: 1;
-    animation: animMenu 3s backwards;
 
 
-}
-
-@keyframes animMenu {
-    0% {
-        transform: translateY(20px);
-        opacity: 0%;
-    }
-
-    100% {
-        transform: translateY(0px);
-        opacity: 100%;
-    }
-
-
-}
 
 @media screen and (min-width: 768px) {
+
+
 
     .restaurantImage-2 {
         width: 100%;
         height: 231px
     }
+
+    .FlecheRetour {
+        margin-left: 23px;
+    }
+
+
+
+    .Hearticon {
+        margin-top: 6px;
+        box-sizing: border-box;
+    }
+
+    .menu .Hearticon {
+        box-sizing: border-box;
+        position: absolute;
+        left: 68%;
+        top: 3%;
+        margin-top: 6px;
+    }
+
 
 
 
@@ -711,7 +760,11 @@ p {
         height: 114px;
     }
 
+    .footerlink {}
 
+    .footerTitle {
+        padding: 0;
+    }
 
     .element-1 {
         order: 4;
