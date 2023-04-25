@@ -303,7 +303,8 @@ p {
     border-radius: 2px;
     right: 10px;
     top: 10px;
-    background: rgba(153, 226, 208, 1);
+    background: #99E2D0;
+
     position: absolute;
     display: flex;
     justify-content: center;
