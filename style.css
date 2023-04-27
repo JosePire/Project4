@@ -317,6 +317,8 @@ p {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 
@@ -455,7 +457,7 @@ p {
     font-weight: 400;
     padding: 0px 17px 0px 17px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 
@@ -659,7 +661,10 @@ article.delay2 {
 
 @media screen and (min-width: 768px) {
 
-
+    .menu-title {
+        display: flex;
+        justify-content: center;
+    }
 
     .restaurantImage-2 {
         width: 100%;
