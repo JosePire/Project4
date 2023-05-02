@@ -4,12 +4,9 @@ body {
 }
 
 .loader {
-
     animation: spin 3s linear;
-
     width: 100%;
     transform-origin: top;
-
 }
 
 @keyframes spin {
@@ -359,7 +356,7 @@ p {
     }
 
     100% {
-        windows: 100%;
+        width: 300px;
 
     }
 
@@ -496,7 +493,7 @@ p {
 .menuCategory::after {
     background: rgba(153, 226, 208, 1);
     position: absolute;
-    border: 3px solid rgba(153, 226, 208, 1);
+
     content: "";
     left: 12px;
     bottom: 10px;
@@ -508,7 +505,7 @@ p {
     flex-direction: row;
     border-radius: 15px;
     background: #FFFFFF;
-    box-shadow: 0 px 4.01149 px 15.0431px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -519,7 +516,7 @@ p {
 }
 
 .left {
-    box-shadow: 0 px 4.01149 px 15.0431px rgba(0, 0, 0, 0.1);
+
     display: flex;
     justify-content: flex-start;
 }
@@ -649,7 +646,7 @@ article.delay2 {
     transform: rotate(360deg);
     padding-top: 4px;
     color: white;
-    aspect-ratio: 1;
+
     font-size: 1.5rem;
 }
 
