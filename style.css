@@ -521,13 +521,14 @@ p {
     justify-content: flex-start;
 }
 
-article.delay1 {
+.delay1 {
 
     animation: appear 3s 1s;
 }
 
-article.delay2 {
+.delay2 {
     animation: appear 3s 2s;
+
 }
 
 @keyframes appear {
