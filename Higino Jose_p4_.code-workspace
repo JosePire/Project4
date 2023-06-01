@@ -1,10 +1,11 @@
 {
 	"folders": [
 		{
+			"path": "../../Portfolio-architecte-sophie-bluel/Projet-6"
+		},
+		{
 			"path": "."
 		}
 	],
-	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "Higino Jose_p4_"
-	}
+	"settings": {}
 }
